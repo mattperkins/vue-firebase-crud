@@ -1,7 +1,8 @@
 export default {
   data () {
     return {
-      msg: 'Hello. World!'
+      label: 'Name:',
+      name: 'Fred'
     }
   }
 }
