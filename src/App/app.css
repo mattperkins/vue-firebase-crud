@@ -7,19 +7,71 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
-
+.wrapper{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
 button{
   background-color: transparent;
   border: 2px solid #42b983;
   font-size: var(--theme-font);
   padding: var(--theme-padding);
+  outline: 0;
 }
 
 input{
     font-size: var(--theme-font);
     padding: var(--theme-padding);
+    display: inline-block;
+    margin-left: 40px;
+}
+
+li {
+    list-style-type: none;
+}
+.card{
+    display: inline-block;
+    width: 255px;
+    background: #f3f3f3;
+    font-size: var(--theme-font);
+    margin: 3px;
+    position: relative;
+}
+.delete{
+    position: absolute;
+    right: 0;
+    top:0;
+    background: red;
+    height: 100%;
+    color: white;
+    line-height: 3.2;
+    width: 20px;
+}
+.delete:hover{
+    background: black;
+    cursor: pointer;
+}
+.edit{
+    position: absolute;
+    left: 0;
+    top:0;
+    background: green;
+    height: 100%;
+    color: white;
+    line-height: 2.4;
+    font-size: .8rem;
+    letter-spacing: 1.5px;
+}
+.edit pre{
+    transform: rotate(270deg);
+    font-family: sans-serif;
+}
+.edit:hover{
+    background: yellow;
+    color: black;
+    cursor: pointer;
 }

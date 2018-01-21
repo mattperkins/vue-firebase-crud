@@ -1,6 +1,27 @@
 <div id="app">
-    <label>{{label}}</label>
-    <input type="text" v-model="name"/>
-    <button>Add</button>
+
+    <div class="wrapper">
+        <input type="text" v-model="name" @change="submitName()" :placeholder="placeholder"/>
+        <button @click="submitName()">Add</button>
+
+        <div>
+            <ul>
+                <li v-for="personName of names" :key="personName['.key']">
+                    <div class="card">
+                        <span @click="editPerson(personName['.key'])" class="edit"><pre>Edit</pre></span>
+                       <p>{{personName.name}}
+                        <span @click="removePerson(personName['.key'])" class="delete">x</span></p> 
+                    </div>
+                    <div v-if="!personName.edit"></div>
+                    <div v-else>
+                        <input type="text" v-model="personName.name">
+                        <button @click="saveEdit(personName)">Save</button>
+                        <button @click="cancelEdit(personName['.key'])">Cancel</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
