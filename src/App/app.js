@@ -17,7 +17,7 @@ export default {
           namesRef.push({
               name: this.name, edit: false
           }), this.name = ''
-          else alert('Please add a name')
+          else alert('Your entry was empty. Please add some content.')
       },
       removePerson(key){
           namesRef.child(key).remove()
